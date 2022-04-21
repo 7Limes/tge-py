@@ -126,9 +126,10 @@ surf.set_color_rgb(0, 127, 255, type='bg')
 ```
 
 ### set_color_code
-`set_color_code()` simply sets the color code to whatever string you pass in. There are no checks to make sure that the code is valid, so make sure you know what you're doing.
-
-Example:
+`set_color_code()` simply sets the color code to whatever string you pass in. There are no checks to make sure that the code is valid, so make sure you know what you're doing. 
+This allows you to have different foreground and background colors in one pixel.
+Examples:
 ```py
-surf.set_color_code('\033[31m')
+surf.set_color_code('\033[31m')          # red
+surf.set_color_code('\033[34m\033[46m')  # blue with cyan background
 ```
