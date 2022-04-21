@@ -24,7 +24,7 @@ Output:
 ```
 
 You can also change the spacing between characters using the `spacing=` keyword argument in the constructor (default is `1`):
-```
+```py
 surf = tge.Surface(WIDTH, HEIGHT, spacing=0)
 ```
 Output:
@@ -70,7 +70,7 @@ Output:
 # # # # #
 ```
 
-To change pixel color, you can use one of two methods:
+To change pixel color, there are three methods:
 - `set_color(self, color: str, type='fg', bright=False)`
 - `set_color_rgb(self, r: int, g: int, b: int, type='fg')`
 - `set_color_code(self, color: str)`
