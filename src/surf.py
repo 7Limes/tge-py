@@ -40,9 +40,14 @@ class Surface:
     if type == 'bg':
       self._color = f'\033[48;2;{r};{g};{b}m'
 
-  def set_color(self, color: str):
+  def set_color(self, color: str, type='fg', bright=False):
+    add = 30
+    if type == 'bg':
+      add = 40
+    if bright:
+      add += 60
     if color in set(COLORS):
-      self._color = f'\033[{30+COLORS.index(color)}m'
+      self._color = f'\033[{add+COLORS.index(color)}m'
     if color == 'reset':
       self._color = '\033[0m'
 
