@@ -63,6 +63,7 @@ mainsurf.fill()
 smallsurf = tge.Surface(3, 3)
 smallsurf.set_drawchar('#')
 smallsurf.fill()
+
 mainsurf.blit(smallsurf, 0, 0)
 mainsurf.display()
 ```
