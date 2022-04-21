@@ -51,6 +51,9 @@ class Surface:
     if color == 'reset':
       self._color = '\033[0m'
 
+  def set_color_code(self, color: str):
+    self._color = color
+
   def draw_pixel(self, x: int, y: int, char: str=None) -> bool:
     if x >= 0 and x < self.width and y >= 0 and y < self.height:
       if not char or char == '':
