@@ -51,6 +51,30 @@ These methods are all part of the `Surface` class.
 - `fill_col(self, col: int)`
 - `blit(self, other, x: int, y: int)`
 
+### blit() Method
+`blit()` takes in another surface object as input and pastes it on top of the current surface at `x, y`:
+```py
+import tge
+
+mainsurf = tge.Surface(5, 5)
+mainsurf.set_drawchar('.')
+mainsurf.fill()
+
+smallsurf = tge.Surface(3, 3)
+smallsurf.set_drawchar('#')
+smallsurf.fill()
+mainsurf.blit(smallsurf, 0, 0)
+mainsurf.display()
+```
+Output:
+```
+# # # . .
+# # # . .
+# # # . .
+. . . . .
+. . . . .
+```
+
 ## Changing Characters and Colors
 To change the draw character, use the `set_drawchar()` method:
 ```py
